@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - SCULPTORA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', serif;
+        }
+        html {
+    scrollbar-color: #D4AF37 #0a0a0a;
+}
+
+
+        body {
+            background: black;
+            color: #E9D5A3;
+        }
+
+        header {
+            padding: 10px 50px;
+            background: #121212;
+            border-top: 2px solid rgba(212, 175, 55, 0.7);
+            border-bottom: 2px solid rgba(212, 175, 55, 0.7);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left:0;
+            width: 100%;
+            z-index: 100;
+        }
+
+        header a {
+            color: #dfdcbb;
+            text-decoration: none;
+            font-size: 11px;
+            letter-spacing: 1px;
+        }
+
+        .logo_name {
+            color: #E9D5A3;
+            letter-spacing: 2px;
+            font-size: 18px;
+        }
+
+        #checkout_page {
+            padding: 120px 40px 40px;
+            display: flex;
+            gap: 30px;
+          
+        }
+
+        #left_side {
+            flex: 2;
+        }
+
+        #right_side {
+            flex: 1;
+        }
+
+        .box {
+            background: #121212;
+            border: 1px solid rgba(212, 175, 55, 0.18);
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        .box h2 {
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            font-size: 20px;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.6), 0 2px 10px black;
+
+        }
+
+        .box h2 i {
+            color: #D4AF37;
+            margin-right: 8px;
+        }
+
+        .form_group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 15px;
+        }
+
+        .form_row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .form_group {
+            flex: 1;
+        }
+
+        .form_group label {
+            color: #A8967A;
+            font-size: 11px;
+            letter-spacing: 1px;
+        }
+
+        .form_group input{
+            background: rgba(233, 213, 163, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 12px;
+            border-radius: 8px;
+            color: #E9D5A3;
+        }
+
+        .form_group input:focus {
+            border-color: #D4AF37;
+        }
+
+        .payment_options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .pay_option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .pay_option:hover {
+            border-color: #D4AF37;
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        .pay_option input {
+            accent-color: #D4AF37;
+        }
+
+        #order_item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        #order_item img {
+            width: 70px;
+            height: 100px;
+            border-radius: 8px;
+        }
+
+        #order_item_info h5 {
+            color: #E9D5A3;
+            font-size: 13px;
+            font-weight: 400;
+        }
+
+        #order_item_info p {
+            color: #A8967A;
+            font-size: 11px;
+            margin-top: 4px;
+        }
+
+        .summary_row {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            font-size: 13px;
+        }
+
+        .summary_row span:first-child {
+            color: #A8967A;
+        }
+
+        .summary_row.total {
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            padding-top: 15px;
+            margin-top: 15px;
+            font-size: 16px;
+            color: #E9D5A3;
+            font-weight: bold;
+        }
+
+        #place_order {
+            width: 100%;
+            padding: 14px;
+            background: #E9D5A3;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            cursor: pointer;
+            color: #121212;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        #place_order:hover {
+            background: #D4AF37;
+            transform: scale(1.02);
+            
+        }
+
+        #secure {
+            text-align: center;
+            margin-top: 10px;
+            color: #A8967A;
+            font-size: 10px;
+            letter-spacing: 1px;
+        }
+
+        footer {
+            display: flex;
+            width: 100%;
+            padding: 15px 50px;
+            align-items: center;
+            background: #121212;
+            margin-top: 40px;
+        }
+
+        .copyright {
+            font-size: 12px;
+            color: #dfdcbb;
+        }
+
+
+        @media (max-width:575.99px) {
+            header {
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px;
+            }
+
+            #checkout_page {
+                flex-direction: column;
+                padding: 140px 10px 20px;
+            }
+
+            .form_row {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .section_box {
+                padding: 15px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 10px;
+                padding: 15px 10px;
+                text-align: center;
+            }
+        }
+
+        @media (min-width:576px) and (max-width:767.99px) {
+            header {
+                flex-direction: column;
+                gap: 12px;
+                padding: 12px 15px;
+            }
+
+            #checkout_page {
+                flex-direction: column;
+                padding: 150px 20px 20px;
+            }
+        }
+
+    
+        @media (min-width:768px) and (max-width:991.99px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            #checkout_page {
+                padding: 160px 20px 20px;
+            }
+        }
+
+        @media (min-width:992px) and (max-width:1199.99px) {
+            #checkout_page {
+                padding: 110px 25px 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo_name">SCULPTORA GALLERY</div>
+        <a href="COLLECTION.html"><i class="fa-solid fa-arrow-left"></i> BACK TO COLLECTION</a>
+    </header>
+
+    <div id="checkout_page">
+        <div id="left_side">
+            <div class="box">
+                <h2><i class="fa-solid fa-truck"></i> SHIPPING ADDRESS</h2>
+                <div class="form_row">
+                    <div class="form_group"><label>FIRST NAME</label><input type="text" placeholder="xxx" ></div>
+                    <div class="form_group"><label>LAST NAME</label><input type="text" placeholder="yyy" ></div>
+                </div>
+                <div class="form_group"><label>EMAIL</label><input type="email" placeholder="abc@gmail.com" ></div>
+                <div class="form_group"><label>ADDRESS</label><input type="text" placeholder="House No, Street Name, Area"></div>
+                <div class="form_row">
+                    <div class="form_group"><label>CITY</label><input type="text" placeholder="Chennai"></div>
+                    <div class="form_group"><label>PINCODE</label><input type="text" placeholder="600001"></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <h2><i class="fa-solid fa-credit-card"></i> PAYMENT</h2>
+                <div class="payment_options">
+                    <label class="pay_option"><input type="radio" name="pay" checked> <i
+                            class="fa-solid fa-money-bill"></i> Cash on Delivery</label>
+                    <label class="pay_option"><input type="radio" name="pay"> <i class="fa-brands fa-cc-visa"></i>
+                        Credit / Debit Card</label>
+                    <label class="pay_option"><input type="radio" name="pay"> <i class="fa-solid fa-qrcode"></i> UPI
+                        Payment</label>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="right_side">
+            <div class="box">
+                <h2><i class="fa-solid fa-bag-shopping"></i> ORDER SUMMARY (2)</h2>
+
+                <div id="order_item">
+                    <img src="./images/classical_image (1).jpeg">
+                    <div id="order_item_info">
+                        <h5>DIANA HUNTRESS</h5>
+                        <p>1st Century • Carrara Marble</p>
+                        <p style="color:#E9D5A3; margin-top:6px;">$3,200 x 1</p>
+                    </div>
+                </div>
+
+                <div id="order_item">
+                    <img src="./images/renaissance_image 1.jpeg">
+                    <div id="order_item_info">
+                        <h5>VERA VELATA</h5>
+                        <p>68 CM • Florence</p>
+                        <p style="color:#E9D5A3; margin-top:6px;">$3,200 x 2</p>
+                    </div>
+                </div>
+
+                <div class="summary_row"><span>Subtotal</span><span>$9,600</span></div>
+                <div class="summary_row"><span>Shipping</span><span style="color:#4caf50;">FREE</span></div>
+                <div class="summary_row"><span>Tax (18%)</span><span>$1,728</span></div>
+                <div class="summary_row total"><span>Total</span><span>$11,328</span></div>
+
+                <a href="success.html" style="text-decoration:none;">
+  <button id="place_order">PLACE ORDER - $11,328 <i class="fa-solid fa-lock" style="margin-left:8px;"></i></button>
+</a>
+                <p id="secure"><i class="fa-solid fa-lock"></i> SECURE CHECKOUT -- 256-BIT SSL</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="copyright">© 2024 SCULPTORA GALLERY. All rights reserved.</div>
+    </footer>
+
+</body>
+
+</html>

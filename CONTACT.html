@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCULPTORA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.css">
+    <link rel="stylesheet" href="CONTACT.css">
+</head>
+
+<body>
+    <header>
+        <!-- LEFT SIDE OF HEADER -->
+        <div class="left">
+            <!-- CONTAINER FOR LOGO -->
+            <div class="logo">
+                <img src="./images/logo.png" alt="Sculptora Gallery" height="45" width="45">
+            </div>
+            <!-- CONTAINER FOR WEBSITE NAME -->
+            <div class="name">
+                <h3>SCULPTORA <br><span>GALLERY</span></h3>
+            </div>
+        </div>
+        <!-- MIDDLE SIDE OF HEADER -->
+        <div class="middle">
+            <!-- NAVIGATION BAR -->
+            <nav>
+                <!-- UNORDERED LIST CONTAINS NAVIGATION ITEMS -->
+                <ul>
+                    <!-- NAVIGATION LINK -->
+                    <li><a href="HOME.html">HOME</a></li>
+                    <li><a href="ABOUT.html">ABOUT</a></li>
+                    <li><a href="COLLECTION.html">COLLECTIONS</a></li>
+                    <li><a href="ARTIST.html">ARTISTS</a></li>
+                    <li><a href="JOURNAL.html">JOURNAL</a></li>
+                    <li><a href="VISIT.html">VISIT</a></li>
+                    <li><a href="CONTACT.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+         <div class="right">
+            <!-- ICONS -->
+            <!-- SEARCH ICON -->
+            <div class="icon1"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <!-- USER ICON -->
+            <div class="icon1"><a href="REGISTER.html"><i class="fa-solid fa-user"></i></a></div>
+            <!-- SHOPPING BAG ICON -->
+            <div class="CART">
+                <div id="ICON">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span id="count">2</span>
+                </div>
+
+                <div class="sidebar">
+                    <div id="cart_header">
+                        <div>
+                            <h3>YOUR CART</h3>
+                            <p>2 sculptures</p>
+                        </div>
+                        <div id="closeCart"><a href="COLLECTION.html"  style="color:goldenrod"><i class="fa-solid fa-xmark"></i></a></div>
+                    </div>
+
+                    <div id="cart_items">
+                        <div class="item">
+                            <div class="item_img"><img src="./images/classical_image (1).jpeg"></div>
+                            <div class="item_content">
+                                <h5>DIANA HUNTRESS</h5>
+                                <span>1st century / Carrara</span>
+                                <div class="qty_price">
+                                    <div class="qty"><span>-</span><span>1</span><span>+</span></div>
+                                    <p>$3,200</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item_img"><img src="./images/renaissance_image 1.jpeg"></div>
+                            <div class="item_content">
+                                <h5>VERA VELATA</h5>
+                                <span>68 cm / Florence</span>
+                                <div class="qty_price">
+                                    <div class="qty"><span>-</span><span>2</span><span>+</span></div>
+                                    <p>$6,400</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="cart_footer">
+                        <div id="total"><span>Total</span><span>$9,600</span></div>
+                        <a href="checkout.html" id="link"><button id="checkout">PROCEED TO CHECKOUT</button></a>
+                        <button id="continue">CONTINUE SHOPPING
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+    <section id="contact">
+        <h1>Contact Us</h1>
+        <div class="line"><img src="./images/Firefly_RemoveBackground.png" alt="" height="20" width="200"></div>
+
+        <p>We'd be honoured to assist with your inquiry.Please fill out the form and we'll respond within 24 hours.</p>
+        <div class="container">
+            <form action="">
+                <label for="">Full Name</label>
+                <input type="text" placeholder="Enter your full name">
+                <label for="">Email</label>
+                <input type="email" placeholder="your@gmail.com">
+                <label for="">Enquiry Type</label>
+                <select name="" id="">
+                    <option value="">Select Enquiry Type</option>
+                    <option value="">Gallery Visit</option>
+                    <option value="">Artwork Purchase</option>
+                    <option value="">Private Tour Bookings</option>
+                    <option value="">Press & Partnership</option>
+                    <option value="">Other</option>
+                </select>
+                <label for="">Message</label>
+                <textarea name="" id="" rows="4" placeholder="Tell us how can we help you..."></textarea>
+                <button>SEND MESSAGE</button>
+            </form>
+        </div>
+        <div class="divider"></div>
+        <div class="box">
+            <div class="contact">
+                <h5>CONTACT</h5>
+                <p>appointment@sculptoragallery.com</p>
+                <span>+1 (415) 555-0147</span>
+            </div>
+            <div class="location">
+                <h5>LOCATION</h5>
+                <p>12 Museum Way</p>
+                <span>San Fransisco,CA94111</span>
+            </div>
+            <div class="hours">
+                <h5>HOURS</h5>
+                <p>Tue-Sun | 10am-6pm</p>
+                <span>closed Mondays</span>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+    <footer>
+        <div class="first_row">
+            <div>SCULPTORA GALLERY<br>Florence - Since 2000</div>
+            <div>Privacy Policy | Accessibility | careers</div>
+            <div class="links">
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                    <li><a href="#"><i class="fa-brands fa-pinterest"></i> Pinterest </a></li>
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i> Facebook </a></li>
+                    <li><a href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn </a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="width:100%;height:1px; background-color:rgba(231, 217, 133,0.3);"></div>
+        <div class="second_row">
+            <div class="copyright">
+                <i class="fa-solid fa-copyright"></i> 2024 SCULPTORA GALLERY.All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

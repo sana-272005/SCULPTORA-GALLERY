@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCULPTORA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow: hidden;
+            height: 100vh;
+            /* background-color: black; */
+            background-image: url("./images/index.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+
+        }
+
+
+        #door {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            z-index: 1;
+        }
+
+        #door .left,
+        #door .right {
+            width: 50%;
+            height: 100vh;
+        }
+
+        #door .left {
+            transform-origin: left;
+            animation: openleft 5s 1 forwards 2s;
+        }
+
+        #door .right {
+            transform-origin: right;
+            animation: openright 5s 1 forwards 2s;
+        }
+
+        .left img,
+        .right img {
+            width: 100%;
+            height: 100%;
+        }
+
+        @keyframes openleft {
+            0% {
+                transform: rotateY(0deg);
+            }
+
+            100% {
+                transform: rotateY(-90deg);
+            }
+        }
+
+        @keyframes openright {
+            0% {
+                transform: rotateY(0deg);
+            }
+
+            100% {
+                transform: rotateY(90deg);
+            }
+
+        }
+
+        #welcome {
+            /* background-color: black; */
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            background: rgba(0, 0, 0, 0.65);
+            position: fixed;
+            top: 0;
+            left: 0;
+            /* z-index:-1; */
+            animation: showwelcome 2s 1 ease-in forwards;
+        }
+
+        @keyframes showwelcome {
+            0% {
+                opacity: 0;
+                transform: translateY(-50%);
+
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0%);
+                /* z-index:2; */
+            }
+
+        }
+
+        #welcome h2 {
+            color: #E9D5A3;
+            font-size: 42px;
+            text-align: center;
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.6), 0 2px 10px black;
+        }
+
+        #welcome p {
+            color: #baa570;
+            font-weight: bold;
+            font-size: 20px;
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.6), 0 2px 10px black;
+
+
+        }
+
+        #welcome a {
+            margin-top: 20px;
+            color: #D4AF37;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        #welcome a:hover {
+            color: white;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <!-- <div id="door">
+
+        <div class="left">
+            <img src="./images/door (2).jpeg" alt="">
+        </div>
+
+        <div class="right">
+            <img src="./images/door (1).jpeg" alt="">
+        </div>
+
+    </div> -->
+
+    <div id="welcome">
+        <h2>WELCOME TO SCULPTORA GALLERY
+        </h2>
+        <p>Where Stone Becomes Soul</p>
+        <a href="HOME.html">
+            STEP INTO SCULPTORA
+            <i class="fa-solid fa-arrow-right-long"></i>
+        </a>
+
+    </div>
+
+
+</body>
+
+</html>

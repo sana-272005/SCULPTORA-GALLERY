@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - SCULPTORA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', serif;
+        }
+
+        html {
+            scrollbar-color: #D4AF37 #0a0a0a;
+        }
+
+        body {
+            background: #080808;
+            color: #E9D5A3;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 14px 50px;
+            background: rgba(18, 18, 18, 0.9);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        #logo img {
+            border-radius: 50%;
+            box-shadow: 0 0 12px rgba(233, 213, 163, 0.5);
+        }
+
+        #logo h3 {
+            letter-spacing: 4px;
+            font-weight: 300;
+            font-size: 16px;
+        }
+
+        #logo span {
+            color: #A8967A;
+            font-size: 10px;
+            letter-spacing: 3px;
+            display: block;
+        }
+
+        #main {
+            margin: 0 auto;
+            padding: 60px 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        #checkWrap {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        #checkCircle {
+            width: 110px;
+            height: 110px;
+            background: linear-gradient(135deg, #E9D5A3, #D4AF37);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 46px;
+            color: #121212;
+            box-shadow: 0 0 40px rgba(212, 175, 55, 0.5);
+            animation: pop 1s ease infinite;
+        }
+
+        @keyframes pop {
+            0% {
+                transform: scale(0);
+            }
+
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        #ring {
+            position: absolute;
+            inset: -12px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        #ring2 {
+            position: absolute;
+            inset: -24px;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            border-radius: 50%;
+            animation: pulse 2s 0.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(0.8);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        #main h1 {
+            font-size: 42px;
+            letter-spacing: 6px;
+            font-weight: 200;
+            color: #E9D5A3;
+            margin-bottom: 12px;
+            line-height: 1;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.6), 0 2px 10px black;
+
+        }
+
+        #main h1 span {
+            color: #D4AF37;
+            font-weight: 400;
+        }
+
+        #subtitle {
+            color: #A8967A;
+            font-size: 13px;
+            letter-spacing: 1px;
+            max-width: 500px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        #orderCard {
+            background: linear-gradient(145deg, #121212, #0f0f0f);
+            border: 1px solid rgba(212, 175, 55, 0.18);
+            border-radius: 22px;
+            padding: 32px;
+            width: 100%;
+            max-width: 700px;
+            text-align: left;
+            position: relative;
+            margin-bottom: 24px;
+        }
+
+        #cardTop {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 26px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        #orderId b {
+            font-size: 14px;
+            letter-spacing: 2px;
+        }
+
+        #orderId p {
+            font-size: 10px;
+            color: #A8967A;
+            letter-spacing: 1px;
+            margin-top: 4px;
+        }
+
+        #status {
+            background: rgba(76, 175, 80, 0.12);
+            border: 1px solid rgba(76, 175, 80, 0.3);
+            color: #4caf50;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 10px;
+            letter-spacing: 2px;
+        }
+
+        .item {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 18px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.08);
+        }
+
+        .item img {
+            width: 72px;
+            height: 100px;
+            border-radius: 12px;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        .item_info {
+            flex: 1;
+        }
+
+        .item_info h5 {
+            font-size: 13px;
+            letter-spacing: 1px;
+            font-weight: 400;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.6), 0 2px 10px black;
+
+        }
+
+        .item_info p {
+            font-size: 10px;
+            color: #A8967A;
+            margin-top: 4px;
+        }
+
+        .item_price {
+            color: #E9D5A3;
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        #summaryGrid {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            max-width: 700px;
+            margin-bottom: 24px;
+        }
+
+        .sumBox {
+            flex: 1;
+            background: #121212;
+            border: 1px solid rgba(212, 175, 55, 0.12);
+            border-radius: 16px;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .sumBox h4 {
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: #A8967A;
+            margin-bottom: 14px;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.6), 0 2px 10px black;
+
+        }
+
+        .sumBox p {
+            font-size: 12px;
+            line-height: 1.7;
+            color: #E9D5A3;
+        }
+
+        .sumBox i {
+            color: #D4AF37;
+            margin-right: 6px;
+            width: 14px;
+        }
+
+        #totalBar {
+            width: 100%;
+            max-width: 700px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.08), rgba(18, 18, 18, 1));
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 16px;
+            padding: 18px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        #totalBar span:first-child {
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #A8967A;
+        }
+
+        #totalBar span:last-child {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        #actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 15px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 10px;
+            letter-spacing: 2.5px;
+            font-weight: bold;
+            transition: 0.4s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #btnHome {
+            background: linear-gradient(135deg, #E9D5A3, #D4AF37);
+            color: #121212;
+            /* box-shadow: 0 8px 24px rgba(212, 175, 55, 0.3); */
+        }
+
+        #btnHome:hover {
+            transform: translateY(-3px);
+
+        }
+
+        #btnTrack {
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            color: #E9D5A3;
+            background: rgba(233, 213, 163, 0.05);
+        }
+
+        #btnTrack:hover {
+            border-color: #D4AF37;
+            background: rgba(212, 175, 55, 0.1);
+        }
+
+        #emoji {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        #emoji span {
+            position: absolute;
+            top: -30px;
+            font-size: 20px;
+            animation: fall 4s infinite linear;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-20px) rotate(0deg);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        #emoji span:nth-child(1) {
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        #emoji span:nth-child(2) {
+            left: 30%;
+            animation-delay: 0.5s;
+        }
+
+        #emoji span:nth-child(3) {
+            left: 50%;
+            animation-delay: 1s;
+        }
+
+        #emoji span:nth-child(4) {
+            left: 70%;
+            animation-delay: 1.5s;
+        }
+
+        #emoji span:nth-child(5) {
+            left: 90%;
+            animation-delay: 0.8s;
+        }
+
+        @media(max-width:575.99px) {
+            header {
+                padding: 10px;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            #main {
+                padding: 30px 12px;
+            }
+
+            #main h1 {
+                font-size: 28px;
+                letter-spacing: 3px;
+            }
+
+            #orderCard {
+                padding: 18px;
+                border-radius: 14px;
+            }
+
+            #summaryGrid {
+                flex-direction: column;
+            }
+
+            #actions {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn {
+                justify-content: center;
+            }
+        }
+
+        @media(min-width:576px) and (max-width:767.99px) {
+            #main {
+                padding: 30px 20px;
+            }
+
+            #summaryGrid {
+                flex-direction: column;
+            }
+        }
+
+        @media(min-width:768px) and (max-width:991.99px) {
+            #main {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="emoji">
+        <span>✨</span><span>🎉</span><span>🏛️</span><span>✨</span><span>💛</span>
+    </div>
+
+    <header>
+        <div id="logo">
+            <img src="./images/logo.png" height="38" width="38">
+            <h3>SCULPTORA<span>GALLERY</span></h3>
+        </div>
+        <a href="COLLECTION.html" style="color:#dfdcbb; text-decoration:none; font-size:10px; letter-spacing:2px;"><i
+                class="fa-solid fa-arrow-left"></i> CONTINUE SHOPPING</a>
+    </header>
+
+    <div id="main">
+        <div id="checkWrap">
+            <div id="ring"></div>
+            <div id="ring2"></div>
+            <div id="checkCircle"><i class="fa-solid fa-check"></i></div>
+        </div>
+
+        <h1>THANK <span>YOU!</span></h1>
+        <p id="subtitle">Your order has been confirmed. Your sculptures are being carefully inspected and packed by our
+            master artisans in Florence.</p>
+
+        <div id="orderCard">
+            <div id="cardTop">
+                <div id="orderId"><b>#SCU-2024-8842</b>
+                    <p>Placed on Sep 19, 2026 - 11:34 AM</p>
+                </div>
+                <div id="status"><i class="fa-solid fa-circle" style="font-size:6px; margin-right:6px;"></i> CONFIRMED
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="./images/classical_image (1).jpeg">
+                <div class="item_info">
+                    <h5>DIANA HUNTRESS</h5>
+                    <p>1ST CENTURY - CARRARA MARBLE</p>
+                    <p style="margin-top:6px; color:#A8967A;">QTY 1</p>
+                </div>
+                <div class="item_price">$3,200</div>
+            </div>
+            <div class="item">
+                <img src="./images/renaissance_image 1.jpeg">
+                <div class="item_info">
+                    <h5>VERA VELATA</h5>
+                    <p>68 CM - FLORENCE</p>
+                    <p style="margin-top:6px; color:#A8967A;">QTY 2</p>
+                </div>
+                <div class="item_price">$6,400</div>
+            </div>
+        </div>
+
+        <div id="summaryGrid">
+            <div class="sumBox">
+                <h4><i class="fa-solid fa-location-dot"></i> SHIPPING TO</h4>
+                <p>XXX<br>12, Museum Road, Egmore<br>Chennai, TN 600008<br>+91 98765 43210</p>
+            </div>
+            <div class="sumBox">
+                <h4><i class="fa-solid fa-truck"></i> DELIVERY</h4>
+                <p><i class="fa-solid fa-box"></i> Free Express Shipping<br><i class="fa-solid fa-clock"></i> 3-5
+                    Business Days<br><i class="fa-solid fa-shield-halved"></i> Insured & Protected</p>
+            </div>
+        </div>
+
+        <div id="totalBar">
+            <span>TOTAL PAID</span>
+            <span>$8,640</span>
+        </div>
+
+        <div id="actions">
+            <a href="COLLECTION.html" class="btn" id="btnHome"><i class="fa-solid fa-bag-shopping"></i> CONTINUE
+                SHOPPING</a>
+            <a href="#" class="btn" id="btnTrack"><i class="fa-solid fa-truck-fast"></i> TRACK ORDER</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

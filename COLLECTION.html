@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCULPTORA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.css">
+    <link rel="stylesheet" href="COLECTION.css">
+</head>
+
+<body>
+    <header>
+        <!-- LEFT SIDE OF HEADER -->
+        <div class="left">
+            <!-- CONTAINER FOR LOGO -->
+            <div class="logo">
+                <img src="./images/logo.png" alt="Sculptora Gallery" height="45" width="45">
+            </div>
+            <!-- CONTAINER FOR WEBSITE NAME -->
+            <div class="name">
+                <h3>SCULPTORA <br><span>GALLERY</span></h3>
+            </div>
+        </div>
+        <!-- MIDDLE SIDE OF HEADER -->
+        <div class="middle">
+            <!-- NAVIGATION BAR -->
+            <nav>
+                <!-- UNORDERED LIST CONTAINS NAVIGATION ITEMS -->
+                <ul>
+                    <!-- NAVIGATION LINK -->
+                    <li><a href="HOME.html">HOME</a></li>
+                    <li><a href="ABOUT.html">ABOUT</a></li>
+                    <li><a href="COLLECTION.html">COLLECTIONS</a></li>
+                    <li><a href="ARTIST.html">ARTISTS</a></li>
+                    <li><a href="JOURNAL.html">JOURNAL</a></li>
+                    <li><a href="VISIT.html">VISIT</a></li>
+                    <li><a href="CONTACT.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="right">
+            <!-- ICONS -->
+            <!-- SEARCH ICON -->
+            <div class="icon1"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <!-- USER ICON -->
+            <div class="icon1"><a href="REGISTER.html"><i class="fa-solid fa-user"></i></a></div>
+            <!-- SHOPPING BAG ICON -->
+            <div class="CART">
+                <div id="ICON">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span id="count">2</span>
+                </div>
+
+                <div class="sidebar">
+                    <div id="cart_header">
+                        <div>
+                            <h3>YOUR CART</h3>
+                            <p>2 sculptures</p>
+                        </div>
+                        <div id="closeCart"><a href="COLLECTION.html"  style="color:goldenrod"><i class="fa-solid fa-xmark"></i></a></div>
+                    </div>
+
+                    <div id="cart_items">
+                        <div class="item">
+                            <div class="item_img"><img src="./images/classical_image (1).jpeg"></div>
+                            <div class="item_content">
+                                <h5>DIANA HUNTRESS</h5>
+                                <span>1st century / Carrara</span>
+                                <div class="qty_price">
+                                    <div class="qty"><span>-</span><span>1</span><span>+</span></div>
+                                    <p>$3,200</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item_img"><img src="./images/renaissance_image 1.jpeg"></div>
+                            <div class="item_content">
+                                <h5>VERA VELATA</h5>
+                                <span>68 cm / Florence</span>
+                                <div class="qty_price">
+                                    <div class="qty"><span>-</span><span>2</span><span>+</span></div>
+                                    <p>$6,400</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="cart_footer">
+                        <div id="total"><span>Total</span><span>$9,600</span></div>
+                        <a href="checkout.html" id="link"><button id="checkout">PROCEED TO CHECKOUT</button></a>
+                        <button id="continue">CONTINUE SHOPPING
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="collection">
+        <h1>OUR COLLECTIONS</h1>
+        <div class="line" style="margin-top:10px;"><img src="./images/Firefly_RemoveBackground.png" alt="" height="20"
+                width="200"></div>
+        <p>Curated sculptural dialogues.</p>
+        <div class="clc_type">
+            <button><a href="COLLECTION.html">All</a></button>
+            <button><a href="classical.html">CLASSICAL</a></button>
+            <button><a href="contemporary.html">CONTEMPORARY</a></button>
+            <button><a href="renaissance.html">RENAISSANCE</a></button>
+        </div>
+        <div class="container">
+            <div class="box">
+                <img src="./images/classical_image (1).jpeg" alt="">
+                <div class="box_content">
+                    <h5>DIANA HUNTRESS</h5>
+                    <ul>
+                        <li>1st century</li>
+                        <li>Carrara Marble</li>
+                    </ul>
+                    <h4>$3,200</h4>
+                    <button>ADD TO CART</button>
+                    <button>BUY NOW</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/classical_image (2).jpeg" alt="">
+                <div class="box_content">
+                    <h5>HERA REGINA</h5>
+                    <ul>
+                        <li>1st Century</li>
+                        <li>Carrara Marble</li>
+                    </ul>
+                    <h4>$2,900</h4>
+                    <button>ADD TO CART</button>
+                    <button>BUY NOW</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/classical_image (3).jpeg" alt="">
+                <div class="box_content">
+                    <h5>Muse with Lyre</h5>
+                    <ul>
+                        <li>1st Century</li>
+                        <li>Carrara Marble</li>
+                    </ul>
+                    <h4>$4,300</h4>
+                    <button>ADD TO CART</button>
+                    <button>BUY NOW</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/classical_image (4).jpeg" alt="">
+                <div class="box_content">
+                    <h5>MARCUS AURELIUS</h5>
+                    <ul>
+                        <li>2nd Century</li>
+                        <li>Carrara Marble</li>
+                    </ul>
+                    <h4>$3,300</h4>
+                    <button>ADD TO CART</button>
+                    <button>BUY NOW</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/renaissance_image 1.jpeg" alt="">
+                <div class="box_content">
+                    <h5>VERA VELATA</h5>
+                    <ul>
+                        <li>68 CM</li>
+                        <li>FLORENCE</li>
+                    </ul>
+                    <h4>$3,200</h4>
+                    <button>ADD TO CART</button>
+                    <button>BUY NOW</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/renaissance_image 2.jpeg" alt="">
+                <div class="box_content">
+                    <h5>LA QUIETA</h5>
+                    <ul>
+                        <li>72 CM</li>
+                        <li>VENETIAN</li>
+                    </ul>
+                    <h4>$2,900</h4>
+                    <button>ADD TO CART</button>
+                    <button>BUY NOW</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/renaissance_image 3.jpeg" alt="">
+                <div class="box_content">
+                    <h5>MATRONA IN TOGA</h5>
+                    <ul>
+                        <li>65 CM</li>
+                        <li>ROMAN</li>
+                    </ul>
+                    <h4>$4,300</h4>
+                    <button>ADD TO CART</button>
+                    <button>BUY NOW</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/renaissance_image 4.jpeg" alt="">
+                <div class="box_content">
+                    <h5>ELENA DI TOSCNA</h5>
+                    <ul>
+                        <li>70 CM</li>
+                        <li>TUSCAN</li>
+                    </ul>
+                    <h4>$3,300</h4>
+                    <button>ADD TO CART</button>
+                    <button>BUY NOW</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/renaissance_image 5.jpeg" alt="">
+                <div class="box_content">
+                    <h5>PIETA SERENA</h5>
+                    <ul>
+                        <li>66 CM</li>
+                        <li>UMBRIAN</li>
+                    </ul>
+                    <h4>$2,940</h4>
+                    <button>ADD TO CART</button>
+                    <button>BUY NOW</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/classical_image (5).jpeg" alt="">
+                <div class="box_content">
+                    <h5>MUSE CALLIOPE</h5>
+                    <ul>
+                        <li>2nd Century</li>
+                        <li>Carrara Marble</li>
+                    </ul>
+                    <h4>$2,940</h4>
+                    <button>ADD TO CART</button>
+                    <button>BUY NOW</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/classical_image (6).jpeg" alt="">
+                <div class="box_content">
+                    <h5>ANTONINUS PIUS</h5>
+                    <ul>
+                        <li>1st Century</li>
+                        <li>Carrara Marble</li>
+                    </ul>
+                    <h4>$3,500</h4>
+                    <button>ADD TO CART</button>
+                    <button>BUY NOW</button>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="./images/classical_image (7).jpeg" alt="">
+                <div class="box_content">
+                    <h5>HADRIAN AS EMPEROR</h5>
+                    <ul>
+                        <li>1st Century</li>
+                        <li>Carrara Marble</li>
+                    </ul>
+                    <h4>$4,100</h4>
+                    <button>ADD TO CART</button>
+                    <button>BUY NOW</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/classical_image (8).jpeg" alt="">
+                <div class="box_content">
+                    <h5>THE ORATOR</h5>
+                    <ul>
+                        <li>3rd Century</li>
+                        <li>Carrara Marble</li>
+                    </ul>
+                    <h4>$2,950</h4>
+                    <button>ADD TO CART</button>
+                    <button>BUY NOW</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/classical_image (9).jpeg" alt="">
+                <div class="box_content">
+                    <h5>WINGED VICTORY OF SAMOTHRACE</h5>
+                    <ul>
+                        <li>3rd Century</li>
+                        <li>Carrara Marble</li>
+                    </ul>
+                    <h4>$3,400</h4>
+                    <button>ADD TO CART</button>
+                    <button>BUY NOW</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/contemporary_image (3).jpeg" alt="">
+                <div class="box_content">
+                    <h5>ECHO OF FORM</h5>
+                    <ul>
+                        <li>38 CM</li>
+                        <li>Carrara Marble</li>
+                    </ul>
+                    <h4>$3,200</h4>
+                    <button>ADD TO CART</button>
+                    <button>BUY NOW</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/contemporary_image (2).jpeg" alt="">
+                <div class="box_content">
+                    <h5>SILENT WHORL</h5>
+                    <ul>
+                        <li>42 CM</li>
+                        <li>Calacatta</li>
+                    </ul>
+                    <h4>$2,900</h4>
+                    <button>ADD TO CART</button>
+                    <button>BUY NOW</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/contemporary_image (6).jpeg" alt="">
+                <div class="box_content">
+                    <h5>FRAGMENT NO.III</h5>
+                    <ul>
+                        <li>35 CM</li>
+                        <li>Statuario</li>
+                    </ul>
+                    <h4>$4,300</h4>
+                    <button>ADD TO CART</button>
+                    <button>BUY NOW</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/contemporary_image (4).jpeg" alt="">
+                <div class="box_content">
+                    <h5>DRAPE STUDY</h5>
+                    <ul>
+                        <li>45 CM</li>
+                        <li>Pietra</li>
+                    </ul>
+                    <h4>$3,300</h4>
+                    <button>ADD TO CART</button>
+                    <button>BUY NOW</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/contemporary_image (5).jpeg" alt="">
+                <div class="box_content">
+                    <h5>INFINITY LOOP</h5>
+                    <ul>
+                        <li>30 CM</li>
+                        <li>White Marble</li>
+                    </ul>
+                    <h4>$2,940</h4>
+                    <button>ADD TO CART</button>
+                    <button>BUY NOW</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/contemporary_image (1).jpeg" alt="">
+                <div class="box_content">
+                    <h5>OBSIDIAN FOLD</h5>
+                    <ul>
+                        <li>50 CM</li>
+                        <li>Black Marble</li>
+                    </ul>
+                    <h4>$3,500</h4>
+                    <button>ADD TO CART</button>
+                    <button>BUY NOW</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/contemporary_image (7).jpeg" alt="">
+                <div class="box_content">
+                    <h5>NEBULA FORM</h5>
+                    <ul>
+                        <li>36 CM</li>
+                        <li>Carrara Marble</li>
+                    </ul>
+                    <h4>$4,100</h4>
+                    <button>ADD TO CART</button>
+                    <button>BUY NOW</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/classical_image (10).jpeg" alt="">
+                <div class="box_content">
+                    <h5>AUGUSTUS</h5>
+                    <ul>
+                        <li>1st Century</li>
+                        <li>Carrara Marble</li>
+                    </ul>
+                    <h4>$3,450</h4>
+                    <button>ADD TO CART</button>
+                    <button>BUY NOW</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <footer>
+        <div class="copyright">
+            <i class="fa-solid fa-copyright"></i> 2024 SCULPTORA GALLERY.All rights reserved.
+        </div>
+        <div class="links">
+            <ul>
+                <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                <li><a href="#"><i class="fa-brands fa-pinterest"></i> Pinterest </a></li>
+                <li><a href="#"><i class="fa-brands fa-facebook"></i> Facebook </a></li>
+                <li><a href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn </a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>
